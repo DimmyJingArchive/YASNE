@@ -1,0 +1,124 @@
+Performing C++ SOURCE FILE Test SUPPORTS_VARIADIC_TEMPLATES failed with the following output:
+Change Dir: /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b2751/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_b2751.dir/build.make CMakeFiles/cmTC_b2751.dir/build
+Building CXX object CMakeFiles/cmTC_b2751.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -stdlib=libc++ -W -Wall -Wextra -Werror -DSUPPORTS_VARIADIC_TEMPLATES   -o CMakeFiles/cmTC_b2751.dir/src.cxx.o -c /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:2:28: error: variadic templates are a C++11 extension [-Werror,-Wc++11-extensions]
+  template <class T, class ...Types>
+                           ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b2751.dir/src.cxx.o] Error 1
+make: *** [cmTC_b2751/fast] Error 2
+
+Source file was:
+
+  template <class T, class ...Types>
+  struct S { typedef typename S<Types...>::type type; };
+  int main() {}
+Performing C++ SOURCE FILE Test SUPPORTS_ENUM_BASE failed with the following output:
+Change Dir: /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_65f9a/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_65f9a.dir/build.make CMakeFiles/cmTC_65f9a.dir/build
+Building CXX object CMakeFiles/cmTC_65f9a.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -stdlib=libc++ -W -Wall -Wextra -Werror -DSUPPORTS_ENUM_BASE   -o CMakeFiles/cmTC_65f9a.dir/src.cxx.o -c /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:2:8: error: ISO C++ forbids forward references to 'enum' types
+  enum C : char {A};
+       ^
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:2:10: error: expected unqualified-id
+  enum C : char {A};
+         ^
+2 errors generated.
+make[1]: *** [CMakeFiles/cmTC_65f9a.dir/src.cxx.o] Error 1
+make: *** [cmTC_65f9a/fast] Error 2
+
+Source file was:
+
+  enum C : char {A};
+  int main() {}
+Performing C++ SOURCE FILE Test SUPPORTS_TYPE_TRAITS failed with the following output:
+Change Dir: /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c59e1/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_c59e1.dir/build.make CMakeFiles/cmTC_c59e1.dir/build
+Building CXX object CMakeFiles/cmTC_c59e1.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -stdlib=libc++ -W -Wall -Wextra -Werror -DSUPPORTS_TYPE_TRAITS   -o CMakeFiles/cmTC_c59e1.dir/src.cxx.o -c /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx
+In file included from /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:2:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2088:55: error: 'operator=' is a private member of 'C'
+typename __select_2nd<decltype((_VSTD::declval<_Tp>() = _VSTD::declval<_Arg>())), true_type>::type
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:799:36: note: expanded from macro 'decltype'
+#  define decltype(__x) __decltype(__x)
+                                   ^~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2097:24: note: while substituting explicitly-specified template arguments into function template '__is_assignable_test' 
+    : public decltype((_VSTD::__is_assignable_test<_Tp, _Arg>(0))) {};
+                       ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:441:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2107:14: note: in instantiation of template class 'std::__1::__is_assignable_imp<C &, const C &, false>' requested here
+    : public __is_assignable_imp<_Tp, _Arg> {};
+             ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2117:14: note: in instantiation of template class 'std::__1::is_assignable<C &, const C &>' requested here
+    : public is_assignable<typename add_lvalue_reference<_Tp>::type,
+             ^
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:4:36: note: in instantiation of template class 'std::__1::is_copy_assignable<C>' requested here
+  int main() { static_assert(!std::is_copy_assignable<C>::value, ""); }
+                                   ^
+In file included from /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:2:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2088:55: error: 'operator=' is a private member of 'C'
+typename __select_2nd<decltype((_VSTD::declval<_Tp>() = _VSTD::declval<_Arg>())), true_type>::type
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:799:36: note: expanded from macro 'decltype'
+#  define decltype(__x) __decltype(__x)
+                                   ^~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2097:24: note: while substituting deduced template arguments into function template '__is_assignable_test' [with _Tp = C &, _Arg = const C &]
+    : public decltype((_VSTD::__is_assignable_test<_Tp, _Arg>(0))) {};
+                       ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:441:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2107:14: note: in instantiation of template class 'std::__1::__is_assignable_imp<C &, const C &, false>' requested here
+    : public __is_assignable_imp<_Tp, _Arg> {};
+             ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:2117:14: note: in instantiation of template class 'std::__1::is_assignable<C &, const C &>' requested here
+    : public is_assignable<typename add_lvalue_reference<_Tp>::type,
+             ^
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:4:36: note: in instantiation of template class 'std::__1::is_copy_assignable<C>' requested here
+  int main() { static_assert(!std::is_copy_assignable<C>::value, ""); }
+                                   ^
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:4:16: error: static_assert failed ""
+  int main() { static_assert(!std::is_copy_assignable<C>::value, ""); }
+               ^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:783:36: note: expanded from macro 'static_assert'
+#   define static_assert(__b, __m) _Static_assert(__b, __m)
+                                   ^              ~~~
+3 errors generated.
+make[1]: *** [CMakeFiles/cmTC_c59e1.dir/src.cxx.o] Error 1
+make: *** [cmTC_c59e1/fast] Error 2
+
+Source file was:
+
+  #include <type_traits>
+  class C { void operator=(const C&); };
+  int main() { static_assert(!std::is_copy_assignable<C>::value, ""); }
+Performing C++ SOURCE FILE Test SUPPORTS_USER_DEFINED_LITERALS failed with the following output:
+Change Dir: /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2c085/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_2c085.dir/build.make CMakeFiles/cmTC_2c085.dir/build
+Building CXX object CMakeFiles/cmTC_2c085.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -stdlib=libc++ -W -Wall -Wextra -Werror -DSUPPORTS_USER_DEFINED_LITERALS   -o CMakeFiles/cmTC_2c085.dir/src.cxx.o -c /Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/jimmyding/Program/src/School/build/CMakeFiles/CMakeTmp/src.cxx:2:16: error: expected a type
+  void operator"" _udl(long double);
+               ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_2c085.dir/src.cxx.o] Error 1
+make: *** [cmTC_2c085/fast] Error 2
+
+Source file was:
+
+  void operator"" _udl(long double);
+  int main() {}

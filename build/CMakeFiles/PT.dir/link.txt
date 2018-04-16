@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/PT.dir/src/main.cpp.o  -o ../bin/PT 

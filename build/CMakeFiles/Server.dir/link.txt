@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Server.dir/src/Server/server.cpp.o CMakeFiles/Server.dir/src/Backend/Client.cpp.o CMakeFiles/Server.dir/src/Backend/Server.cpp.o  -o ../bin/Server 

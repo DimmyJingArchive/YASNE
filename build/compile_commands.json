@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/Users/jimmyding/Program/src/School/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -DFMT_HEADER_ONLY=1 -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -o CMakeFiles/Client.dir/src/Client/client.cpp.o -c /Users/jimmyding/Program/src/School/src/Client/client.cpp",
+  "file": "/Users/jimmyding/Program/src/School/src/Client/client.cpp"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -DFMT_HEADER_ONLY=1 -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -o CMakeFiles/Client.dir/src/Backend/Client.cpp.o -c /Users/jimmyding/Program/src/School/src/Backend/Client.cpp",
+  "file": "/Users/jimmyding/Program/src/School/src/Backend/Client.cpp"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -DFMT_HEADER_ONLY=1 -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -o CMakeFiles/Client.dir/src/Backend/Server.cpp.o -c /Users/jimmyding/Program/src/School/src/Backend/Server.cpp",
+  "file": "/Users/jimmyding/Program/src/School/src/Backend/Server.cpp"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -DFMT_HEADER_ONLY=1 -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -o CMakeFiles/Server.dir/src/Server/server.cpp.o -c /Users/jimmyding/Program/src/School/src/Server/server.cpp",
+  "file": "/Users/jimmyding/Program/src/School/src/Server/server.cpp"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -DFMT_HEADER_ONLY=1 -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -o CMakeFiles/Server.dir/src/Backend/Client.cpp.o -c /Users/jimmyding/Program/src/School/src/Backend/Client.cpp",
+  "file": "/Users/jimmyding/Program/src/School/src/Backend/Client.cpp"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -DFMT_HEADER_ONLY=1 -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -o CMakeFiles/Server.dir/src/Backend/Server.cpp.o -c /Users/jimmyding/Program/src/School/src/Backend/Server.cpp",
+  "file": "/Users/jimmyding/Program/src/School/src/Backend/Server.cpp"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build/third_party/fmt",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -std=c++14 -o CMakeFiles/fmt.dir/src/format.cc.o -c /Users/jimmyding/Program/ext/fmt/src/format.cc",
+  "file": "/Users/jimmyding/Program/ext/fmt/src/format.cc"
+},
+{
+  "directory": "/Users/jimmyding/Program/src/School/build/third_party/fmt",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/jimmyding/Program/src/School/src -I/Users/jimmyding/Program/src/School/src/Backend -I/Users/jimmyding/Program/src/School/include -I/Users/jimmyding/Program/ext/fmt/include  -stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror -g   -std=c++14 -o CMakeFiles/fmt.dir/src/posix.cc.o -c /Users/jimmyding/Program/ext/fmt/src/posix.cc",
+  "file": "/Users/jimmyding/Program/ext/fmt/src/posix.cc"
+}
+]
