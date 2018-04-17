@@ -24,8 +24,8 @@ TCP::Server::Task(TCP::Server* server)
 		}
 		Expect(TCP::select(maxSockFD + 1, &readFD, NULL, NULL, NULL) != -1, "Error selecting");
 		if (FD_ISSET(masterSocket, &readFD))
-			TCP::Server::acceptSocket(masterSocket, address, clientSocket, server);
-		TCP::Server::acceptMessage(clientSocket, address, server, readFD);
+			server->acceptSocket(masterSocket, address, clientSocket);
+		server->acceptMessage(clientSocket, address, readFD);
 	}
 }
 
@@ -93,7 +93,7 @@ TCP::Server::close()
 }
 
 void
-TCP::Server::acceptSocket(int masterSocket, TCP::Address &address, int (&clientSocket)[MAXSOCKETS], TCP::Server *server)
+TCP::Server::acceptSocket(int masterSocket, TCP::Address &address, int (&clientSocket)[MAXSOCKETS])
 {
 	int newSockFD = TCP::accept(masterSocket, address);
 	Expect(newSockFD != -1, "Address not connected");
@@ -104,7 +104,7 @@ TCP::Server::acceptSocket(int masterSocket, TCP::Address &address, int (&clientS
 	{
 		if (!i)
 		{
-			server->addClient(newSockFD);
+			addClient(newSockFD);
 			i = newSockFD;
 			break;
 		}
@@ -112,7 +112,7 @@ TCP::Server::acceptSocket(int masterSocket, TCP::Address &address, int (&clientS
 }
 
 void
-TCP::Server::acceptMessage(int (&clientSocket)[MAXSOCKETS], TCP::Address &address, TCP::Server *server, fd_set &readFD)
+TCP::Server::acceptMessage(int (&clientSocket)[MAXSOCKETS], TCP::Address &address, fd_set &readFD)
 {
 	TCP::Data buffer;
 	for (auto& i : clientSocket)
@@ -121,7 +121,7 @@ TCP::Server::acceptMessage(int (&clientSocket)[MAXSOCKETS], TCP::Address &addres
 		{
 			if (!(TCP::recv(i, buffer)))
 			{
-				server->removeClient(i);
+				removeClient(i);
 				TCP::getpeername(i, address);
 				fmt::print("Client disconnected, ip {0}, port {1}\n\n", address.getAddrStr(), address.getPort());
 				TCP::close(i);
@@ -129,7 +129,7 @@ TCP::Server::acceptMessage(int (&clientSocket)[MAXSOCKETS], TCP::Address &addres
 			}
 			else
 			{
-				server->addMessage({i, buffer.getDataStr()});
+				addMessage({i, buffer.getDataStr()});
 			}
 		}
 	}

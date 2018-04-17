@@ -36,7 +36,7 @@ public:
 
 private:
 	static void Task(TCP::Server* server);
-	static void acceptSocket(int masterSocket, TCP::Address &address, int (&clientSocket)[MAXSOCKETS], TCP::Server* server);
-	static void acceptMessage(int (&clientSocket)[MAXSOCKETS], TCP::Address &address, TCP::Server *server, fd_set &readFD);
+	void acceptSocket(int masterSocket, TCP::Address &address, int (&clientSocket)[MAXSOCKETS]);
+	void acceptMessage(int (&clientSocket)[MAXSOCKETS], TCP::Address &address, fd_set &readFD);
 };
 }
