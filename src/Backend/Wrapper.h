@@ -98,7 +98,7 @@ private:
 
 public:
 	Data() : data(), length(0), delFlg(false) {}
-	Data(char *_data) : data(_data), length(strlen(_data)), delFlg(false) {}
+	//Data(char *_data) : data(_data), length(strlen(_data)), delFlg(false) {}
 	Data(const std::string &str) : data(new char[str.length()]), length(str.length()), delFlg(true) {strncpy(data, str.c_str(), str.length());}
 
 	~Data()

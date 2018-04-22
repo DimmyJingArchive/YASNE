@@ -14,7 +14,7 @@ add_executable(Client ${CLIENT} ${SOURCES})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #Compiler Flags
-set(CMAKE_CXX_FLAGS "-stdlib=libc++ -std=c++1z -W -Wall -Wextra -Werror")
+set(CMAKE_CXX_FLAGS "-std=c++1z -W -Wall -Wextra -Werror -pthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 #-lws2_32 if windows
 
